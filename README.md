@@ -1,2 +1,0 @@
-# ZX-Projekt
-WT Projekt
