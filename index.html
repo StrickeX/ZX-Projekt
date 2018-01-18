@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+  <link rel="stylesheet" href="zx.css">
+	
+<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC04-4YKtGkRpsA-9QHpTENaTzbhCSHB-M",
+    authDomain: "wt-projekt-hardware.firebaseapp.com",
+    databaseURL: "https://wt-projekt-hardware.firebaseio.com",
+    projectId: "wt-projekt-hardware",
+    storageBucket: "wt-projekt-hardware.appspot.com",
+    messagingSenderId: "440685921286"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="zx.js"></script>
+</head>
+
+<body>
+
+
+<!-- button banner -->
+<span >
+		<div class="button-group" style="width: 100%;">
+  			<button onclick="home()" class="button button1" style="width: 20%; "><img src="https://cdn.discordapp.com/attachments/299247471920545792/400233069153615872/Logo.png" alt="Logo" style="width:auto"></button>
+ 			 <button class="button button2" style="width: 60%;" disabled="disabled">PC Hardware comparison</button>
+ 			 <button onclick="log()" class="button button3" id="b3" style="width: 20%";>LogIn</button>
+ 			 <button onclick="signout()" class="button button3" id="b4" style="width: 20%;">LogOut</button>
+		</div>
+	</span>
+
+
+<br>
+
+
+<!-- login box -->
+<span class="flex-container" id="container-log" style="display:none;">
+<div id="box">
+  <h1 id="link">Anmeldung</h1>
+<br>
+  <p class="feld">Email:</p><input class="in-log" id="email-in">
+<br>
+  <p class="feld">Passwort: </p><input class="in-log"  id="pw-in">
+<br>
+  <button id="reg" onclick="submit()" type="submit">Bestätigen</button>
+<br>
+  <p id="link" onclick="reg()">Neu registrieren!</p>
+</div>
+</span>
+
+<div onclick="home()" id="cover"></div>
+<br>
+
+
+<!-- register box -->
+<span class="flex-container" id="container-reg" style="display:none;">
+<div id="box">
+	<h1 id="link">Account erstellen</h1>
+	<form>
+		<label class="feld">Vorname: </label><input id="vname" type="text" name="Vorname" class="in-log"><br>
+		<label class="feld">Nachname: </label><input id="nname" type="text" name="Nachname" class="in-log"><br>
+		<label class="feld">Email-Adresse: </label><input id="email-create" type="text" name="Email" class="in-log"><br>
+		<label class="feld">Passwort: </label><input id="pw-create" type="text" name="Passwort" class="in-log"><br>
+	</form>
+<br>
+	<button id="reg" onclick="create()" type="submit">Bestätigen</button>
+<br>
+	<p id="link" onclick="back()">Zurück zum Login!</p>
+</div>
+</span>
+
+
+<!-- input form -->
+<div class="flex-container" style="display:flex; ">
+<div id="main">
+	<form>
+		<label for="fname">Prozessor</label><br>
+		<input type="text" id="search" placeholder="Search.." class="in-star"><br>
+		<label for="fname">Arbeitsspeicher</label><br>
+		<input type="text" id="search" placeholder="Search.." class="in-star"><br>
+		<label for="fname">Grafikkarte</label><br>
+		<input type="text" id="search" placeholder="Search.." class="in-star"><br>
+		<label for="fname">Mainboard</label><br>
+		<input type="text" id="search" placeholder="Search.." class="in-star"><br>
+		<label for="fname">HDD</label><br>
+		<input type="text" id="search" placeholder="Search.." class="in-star"><br>
+		<label for="fname">SSD</label><br>
+		<input type="text" id="search" placeholder="Search.." class="in-star"><br>
+		<label for="fname">Netzteil</label><br>
+		<input type="text" id="search" placeholder="Search.." class="in-star"><br>
+		<label for="fname">Gehäuse</label><br>
+		<input type="text" id="search" placeholder="Search.." class="in-star"><br>
+    <button class="button button4">Fertig</button>
+	</form>
+</div>
+</div>
+
+
+</body></html>
